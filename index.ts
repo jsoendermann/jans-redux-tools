@@ -22,3 +22,9 @@ export function createAction<T extends string, P>(
 export function createAction<T extends string, P>(type: T, payload?: P) {
   return payload === undefined ? { type } : { type, payload }
 }
+
+export type ActionByType<TActionUnion, TActionType> = TActionUnion extends {
+  type: TActionType
+}
+  ? TActionUnion
+  : never
