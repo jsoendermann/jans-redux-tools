@@ -1,4 +1,11 @@
 {
   "name": "jans-redux-tools",
-  "version": "1.1.0"
+  "version": "1.1.0",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^2.9.1"
+  }
 }
